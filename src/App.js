@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./component/header/Header";
 import Home from "./component/home/Home";
 import MovieDetail from "./component/movieDetail/MovieDetail";
@@ -12,11 +12,11 @@ function App() {
     <div className="app">
       <Router>
         <Header></Header>
-        <Switch>
-          <Route path="/" Component={Home} />
-          <Route path="/movie/:imdbID" Component={MovieDetail} />
-          <Route Component={PageNotFound} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={Home} />
+          <Route path="/movie/:imdbID" element={MovieDetail} />
+          <Route element={PageNotFound} />
+        </Routes>
         <Footer />
       </Router>
     </div>
