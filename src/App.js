@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Header></Header>
+        <Header></Heade>
         <Switch>
           <Route path="/" Component={Home} />
           <Route path="/movie/:imdbID" Component={MovieDetail} />
