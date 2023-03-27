@@ -13,9 +13,9 @@ function App() {
       <Router>
         <Header></Header>
         <Routes>
-          <Route path="/" element={Home} />
-          <Route path="/movie/:imdbID" element={MovieDetail} />
-          <Route element={PageNotFound} />
+          <Route path="/" element={<Home />} />
+          <Route path="/movie/:imdbID" element={<MovieDetail />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </Router>
