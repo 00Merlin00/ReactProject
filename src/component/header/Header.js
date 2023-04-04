@@ -13,7 +13,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
-    if (term === "") return alert("Please enter search term!");
+    if (term === "") return alert("Please enter search termp!");
     dispatch(fetchAsyncMovies(term));
     dispatch(fetchAsyncShows(term));
     setTerm("");
